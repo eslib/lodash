@@ -1,0 +1,49 @@
+{
+  "name": "@eslib/lodash",
+  "version": "0.0.1",
+  "description": "(Lodash + ESlib = <3) Prototype methods for all the Lodash functions",
+  "main": "dist/src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -d",
+    "clean": "rm -rf dist",
+    "lint": "tslint .",
+    "prepublish": "npm run lint && npm test",
+    "pretest": "npm run build",
+    "tdd": "concurrently -k 'npm run watch' 'ava -w'",
+    "test": "ava",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eslib/lodash.git"
+  },
+  "author": "Boris Cherny <boris@performancejs.com> (https://performancejs.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eslib/lodash/issues"
+  },
+  "homepage": "https://github.com/eslib/lodash#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.66",
+    "@types/node": "^8.0.0",
+    "ava": "^0.19.1",
+    "concurrently": "^3.4.0",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {
+    "eslib": "^0.0.4",
+    "lodash": "^4.17.4"
+  },
+  "ava": {
+    "files": [
+      "dist/test/*.js"
+    ],
+    "source": [
+      "dist/src/*.js"
+    ]
+  }
+}
