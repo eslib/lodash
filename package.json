@@ -12,7 +12,7 @@
     "lint": "tslint .",
     "prepublish": "npm run lint && npm test",
     "pretest": "npm run build",
-    "tdd": "concurrently -k 'npm run watch' 'ava -w'",
+    "tdd": "concurrently -rk 'npm run watch' 'ava -w'",
     "test": "ava",
     "watch": "tsc -w"
   },

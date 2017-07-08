@@ -1,4 +1,4 @@
-import { List, ListIterator, ListOfRecursiveArraysOrValues, Many, RecursiveArray, Dictionary, MemoIterator, StringRepresentable } from 'lodash'
+import { ListIterator, ListOfRecursiveArraysOrValues, Many, RecursiveArray, Dictionary, MemoIterator, StringRepresentable } from 'lodash'
 
 // array methods
 declare global {
@@ -12,7 +12,7 @@ declare global {
      * @param size The length of each chunk.
      * @return Returns the new array containing chunks.
      */
-    chunk(this: List<T>, size?: number): T[][]
+    Chunk(this: ArrayLike<T>, size?: number): T[][]
 
     /**
      * Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are
@@ -21,7 +21,7 @@ declare global {
      * @param this The array to compact.
      * @return (Array) Returns the new array of filtered values.
      */
-    compact(this: List<T | null | undefined | false | 0 | ''>): T[]
+    Compact(this: ArrayLike<T | null | undefined | false | 0 | ''>): T[]
 
     /**
      * Creates an array of unique array values not included in the other provided arrays using SameValueZero for
@@ -31,9 +31,9 @@ declare global {
      * @param values The arrays of values to exclude.
      * @return Returns the new array of filtered values.
      */
-    difference(
-      this: List<T>,
-      ...values: Array<List<T>>
+    Difference(
+      this: ArrayLike<T>,
+      ...values: Array<ArrayLike<T>>
     ): T[]
 
     /**
@@ -46,118 +46,118 @@ declare global {
      * @param iteratee The iteratee invoked per element.
      * @returns Returns the new array of filtered values.
      */
-    differenceBy(
-      this: List<T>,
-      values?: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
+      values?: ArrayLike<T>,
       iteratee?: ((value: T) => any) | string
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy<W extends Object>(
-      this: List<T>,
-      values?: List<T>,
+    DifferenceBy<W extends Object>(
+      this: ArrayLike<T>,
+      values?: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
       iteratee?: ((value: T) => any) | string
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy<W extends Object>(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
+    DifferenceBy<W extends Object>(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
       iteratee?: ((value: T) => any) | string
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy<T, W extends Object>(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
+    DifferenceBy<T, W extends Object>(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy<T, W extends Object>(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
-      values4?: List<T>,
+    DifferenceBy<T, W extends Object>(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
+      values4?: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
-      values4?: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
+      values4?: ArrayLike<T>,
       iteratee?: ((value: T) => any) | string
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
-      values4?: List<T>,
-      values5?: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
+      values4?: ArrayLike<T>,
+      values5?: ArrayLike<T>,
       iteratee?: ((value: T) => any) | string
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy<T, W extends Object>(
-      this: List<T>,
-      values1?: List<T>,
-      values2?: List<T>,
-      values3?: List<T>,
-      values4?: List<T>,
-      values5?: List<T>,
+    DifferenceBy<T, W extends Object>(
+      this: ArrayLike<T>,
+      values1?: ArrayLike<T>,
+      values2?: ArrayLike<T>,
+      values3?: ArrayLike<T>,
+      values4?: ArrayLike<T>,
+      values5?: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.differenceBy
+     * @see _.DifferenceBy
      */
-    differenceBy(
-      this: List<T>,
+    DifferenceBy(
+      this: ArrayLike<T>,
       ...values: any[]
     ): T[]
 
@@ -171,11 +171,11 @@ declare global {
      * @returns {Array} Returns the new array of filtered values.
      * @example
      *
-     * _.difference([3, 2, 1], [4, 2]);
+     * _.difference([3, 2, 1], [4, 2])
      * // => [3, 1]
      */
-    differenceWith(
-      this: List<T>,
+    DifferenceWith(
+      this: ArrayLike<T>,
       ...values: any[]
     ): T[]
 
@@ -186,7 +186,7 @@ declare global {
      * @param n The number of elements to drop.
      * @return Returns the slice of array.
      */
-    drop(this: List<T>, n?: number): T[]
+    Drop(this: ArrayLike<T>, n?: number): T[]
 
     /**
      * Creates a slice of array with n elements dropped from the end.
@@ -195,8 +195,8 @@ declare global {
      * @param n The number of elements to drop.
      * @return Returns the slice of array.
      */
-    dropRight(
-      this: List<T>,
+    DropRight(
+      this: ArrayLike<T>,
       n?: number
     ): T[]
 
@@ -218,8 +218,8 @@ declare global {
      * @param thisArg The this binding of predicate.
      * @return Returns the slice of array.
      */
-    dropRightWhile(
-      this: List<T>,
+    DropRightWhile(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>
     ): T[]
 
@@ -227,15 +227,15 @@ declare global {
      * @see _.dropRightWhile
      */
     dropRightWhile(
-      this: List<T>,
+      this: ArrayLike<T>,
       predicate?: string
     ): T[]
 
     /**
      * @see _.dropRightWhile
      */
-    dropRightWhile<U>(
-      this: List<T>,
+    DropRightWhile<U>(
+      this: ArrayLike<T>,
       predicate?: U
     ): T[]
 
@@ -257,29 +257,58 @@ declare global {
      * @param thisArg The this binding of predicate.
      * @return Returns the slice of array.
      */
-    dropWhile(
-      this: List<T>,
+    DropWhile(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>
     ): T[]
 
     /**
-     * @see _.dropWhile
+     * @see _.DropWhile
      */
-    dropWhile(
-      this: List<T>,
+    DropWhile(
+      this: ArrayLike<T>,
       predicate?: string
     ): T[]
 
     /**
-     * @see _.dropWhile
+     * @see _.DropWhile
      */
-    dropWhile<U>(
-      this: List<T>,
+    DropWhile<U>(
+      this: ArrayLike<T>,
       predicate?: U
     ): T[]
 
     /**
-     * This method is like _.findIndex except that it iterates over elements of collection from right to left.
+     * Fills elements of array with value from start up to, but not including, end.
+     *
+     * Note: This method mutates array.
+     *
+     * @param this The array to fill.
+     * @param value The value to fill array with.
+     * @param start The start position.
+     * @param end The end position.
+     * @return Returns array.
+     */
+    Fill<T>(
+      this: T[],
+      value: T,
+      start?: number,
+      end?: number
+    ): T[]
+
+    /**
+     * @see _.Fill
+     */
+    Fill<T>(
+      this: ArrayLike<any>,
+      value: T,
+      start?: number,
+      end?: number
+    ): ArrayLike<T>
+
+    /**
+     * This method is like _.find except that it returns the index of the first element predicate returns truthy
+     * for instead of the element itself.
      *
      * If a property name is provided for predicate the created _.property style callback returns the property
      * value of the given element.
@@ -295,26 +324,67 @@ declare global {
      * @param fromIndex The index to search from.
      * @return Returns the index of the found element, else -1.
      */
-    findLastIndex(
-      this: List<T>,
+    FindIndex<T>(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>,
       fromIndex?: number
     ): number
 
     /**
-     * @see _.findLastIndex
+     * @see _.FindIndex
      */
-    findLastIndex(
-      this: List<T>,
+    FindIndex<T>(
+      this: ArrayLike<T>,
       predicate?: string,
       fromIndex?: number
     ): number
 
     /**
-     * @see _.findLastIndex
+     * @see _.FindIndex
      */
-    findLastIndex<W>(
-      this: List<T>,
+    FindIndex<W, T>(
+      this: ArrayLike<T>,
+      predicate?: W,
+      fromIndex?: number
+    ): number
+
+    /**
+     * This method is like _.FindIndex except that it iterates over elements of collection from right to left.
+     *
+     * If a property name is provided for predicate the created _.property style callback returns the property
+     * value of the given element.
+     *
+     * If a value is also provided for thisArg the created _.matchesProperty style callback returns true for
+     * elements that have a matching property value, else false.
+     *
+     * If an object is provided for predicate the created _.matches style callback returns true for elements that
+     * have the properties of the given object, else false.
+     *
+     * @param this The array to search.
+     * @param predicate The function invoked per iteration.
+     * @param fromIndex The index to search from.
+     * @return Returns the index of the found element, else -1.
+     */
+    FindLastIndex(
+      this: ArrayLike<T>,
+      predicate?: ListIterator<T, boolean>,
+      fromIndex?: number
+    ): number
+
+    /**
+     * @see _.FindLastIndex
+     */
+    FindLastIndex(
+      this: ArrayLike<T>,
+      predicate?: string,
+      fromIndex?: number
+    ): number
+
+    /**
+     * @see _.FindLastIndex
+     */
+    FindLastIndex<W>(
+      this: ArrayLike<T>,
       predicate?: W,
       fromIndex?: number
     ): number
@@ -327,17 +397,17 @@ declare global {
      * @param isDeep Specify a deep flatten.
      * @return Returns the new flattened array.
      */
-    flatten(this: ListOfRecursiveArraysOrValues<T>, isDeep: boolean): T[]
+    Flatten(this: ListOfRecursiveArraysOrValues<T>, isDeep: boolean): T[]
 
     /**
      * @see _.flatten
      */
-    flatten(this: List<Many<T>>): T[]
+    flatten(this: ArrayLike<Many<T>>): T[]
 
     /**
-     * @see _.flatten
+     * @see _.Flatten
      */
-    flatten(this: ListOfRecursiveArraysOrValues<T>): RecursiveArray<T>
+    Flatten(this: ListOfRecursiveArraysOrValues<T>): RecursiveArray<T>
 
     /**
      * Recursively flattens a nested array.
@@ -345,7 +415,7 @@ declare global {
      * @param this The array to recursively flatten.
      * @return Returns the new flattened array.
      */
-    flattenDeep(this: ListOfRecursiveArraysOrValues<T>): T[]
+    FlattenDeep(this: ListOfRecursiveArraysOrValues<T>): T[]
 
     /**
     * Recursively flatten array up to depth times.
@@ -354,28 +424,28 @@ declare global {
     * @param number The maximum recursion depth.
     * @return Returns the new flattened array.
     */
-    flattenDepth(this: ListOfRecursiveArraysOrValues<T>, depth?: number): T[]
+    FlattenDepth(this: ListOfRecursiveArraysOrValues<T>, depth?: number): T[]
 
     /**
-     * The inverse of `_.toPairs`; this method returns an object composed
+     * The inverse of `_.toPairs` this method returns an object composed
      * from key-value `pairs`.
      *
      * @param {Array} pairs The key-value pairs.
      * @returns {Object} Returns the new object.
      * @example
      *
-     * _.fromPairs([['fred', 30], ['barney', 40]]);
+     * _.fromPairs([['fred', 30], ['barney', 40]])
      * // => { 'fred': 30, 'barney': 40 }
      */
-    fromPairs(
-      this: List<[_.StringRepresentable, T]>
+    FromPairs(
+      this: ArrayLike<[_.StringRepresentable, T]>
     ): Dictionary<T>
 
     /**
-     @see _.fromPairs
+     @see _.FromPairs
      */
-    fromPairs(
-      this: List<any[]>
+    FromPairs(
+      this: ArrayLike<any[]>
     ): Dictionary<any>
 
     /**
@@ -386,7 +456,7 @@ declare global {
      * @param this The array to query.
      * @return Returns the first element of array.
      */
-    head(this: List<T>): T | undefined
+    Head(this: ArrayLike<T>): T | undefined
 
     /**
      * This method is like `_.intersection` except that it accepts `iteratee`
@@ -398,15 +468,15 @@ declare global {
      * @returns {Array} Returns the new array of shared values.
      * @example
      *
-     * _.intersectionBy([2.1, 1.2], [4.3, 2.4], Math.floor);
+     * _.intersectionBy([2.1, 1.2], [4.3, 2.4], Math.floor)
      * // => [2.1]
      *
      * // using the `_.property` iteratee shorthand
-     * _.intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
+     * _.intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x')
      * // => [{ 'x': 1 }]
      */
-    intersectionBy(
-      this: List<any>,
+    IntersectionBy(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -420,14 +490,14 @@ declare global {
      * @returns {Array} Returns the new array of shared values.
      * @example
      *
-     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
+     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }]
      *
-     * _.intersectionWith(objects, others, _.isEqual);
+     * _.intersectionWith(objects, others, _.isEqual)
      * // => [{ 'x': 1, 'y': 2 }]
      */
-    intersectionWith(
-      this: List<any>,
+    IntersectionWith(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -441,14 +511,14 @@ declare global {
      * @returns {Array} Returns `array`.
      * @example
      *
-     * var array = [1, 2, 3, 1, 2, 3];
+     * var array = [1, 2, 3, 1, 2, 3]
      *
-     * _.pull(array, [2, 3]);
-     * console.log(array);
+     * _.pull(array, [2, 3])
+     * console.log(array)
      * // => [1, 1]
      */
-    pullAll(
-      this: List<any>,
+    PullAll(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -457,7 +527,7 @@ declare global {
      * invoked for each element of `array` and `values` to to generate the criterion
      * by which uniqueness is computed. The iteratee is invoked with one argument: (value).
      *
-     * **Note:** Unlike `_.differenceBy`, this method mutates `array`.
+     * **Note:** Unlike `_.DifferenceBy`, this method mutates `array`.
      *
      * @param {Array} this The array to modify.
      * @param {Array} values The values to remove.
@@ -465,14 +535,14 @@ declare global {
      * @returns {Array} Returns `array`.
      * @example
      *
-     * var array = [{ 'x': 1 }, { 'x': 2 }, { 'x': 3 }, { 'x': 1 }];
+     * var array = [{ 'x': 1 }, { 'x': 2 }, { 'x': 3 }, { 'x': 1 }]
      *
-     * _.pullAllBy(array, [{ 'x': 1 }, { 'x': 3 }], 'x');
-     * console.log(array);
+     * _.pullAllBy(array, [{ 'x': 1 }, { 'x': 3 }], 'x')
+     * console.log(array)
      * // => [{ 'x': 2 }]
      */
-    pullAllBy(
-      this: List<any>,
+    PullAllBy(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -485,11 +555,11 @@ declare global {
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
-     * _.sortedIndexOf([1, 1, 2, 2], 2);
+     * _.sortedIndexOf([1, 1, 2, 2], 2)
      * // => 2
      */
-    sortedIndexOf(
-      this: List<T>,
+    SortedIndexOf(
+      this: ArrayLike<T>,
       value: T
     ): number
 
@@ -499,7 +569,7 @@ declare global {
      * @param this The array to query.
      * @return Returns the slice of array.
      */
-    initial(this: List<T>): T[]
+    Initial(this: ArrayLike<T>): T[]
 
     /**
      * Creates an array of unique values that are included in all of the provided arrays using SameValueZero for
@@ -508,7 +578,7 @@ declare global {
      * @param arrays The arrays to inspect.
      * @return Returns the new array of shared values.
      */
-    intersection(this: List<T>, ...arrays: Array<List<T>>): T[]
+    Intersection(this: ArrayLike<T>, ...arrays: Array<ArrayLike<T>>): T[]
 
     /**
      * Gets the last element of array.
@@ -516,7 +586,7 @@ declare global {
      * @param this The array to query.
      * @return Returns the last element of array.
      */
-    last(this: List<T>): T | undefined
+    Last(this: ArrayLike<T>): T | undefined
 
     /**
      * Gets the element at index `n` of `array`. If `n` is negative, the nth element from the end is returned.
@@ -525,8 +595,8 @@ declare global {
      * @param value The index of the element to return.
      * @return Returns the nth element of `array`.
      */
-    nth(
-      this: List<T>,
+    Nth(
+      this: ArrayLike<T>,
       n?: number
     ): T | undefined
 
@@ -539,7 +609,7 @@ declare global {
      * @param values The values to remove.
      * @return Returns array.
      */
-    pull(
+    Pull(
       this: T[],
       ...values: T[]
     ): T[]
@@ -547,10 +617,10 @@ declare global {
     /**
      * @see _.pull
      */
-    pull(
-      this: List<T>,
+    Pull(
+      this: ArrayLike<T>,
       ...values: T[]
-    ): List<T>
+    ): ArrayLike<T>
 
     /**
      * Removes elements from array corresponding to the given indexes and returns an array of the removed elements.
@@ -562,8 +632,8 @@ declare global {
      * @param indexes The indexes of elements to remove, specified as individual indexes or arrays of indexes.
      * @return Returns the new array of removed elements.
      */
-    pullAt(
-      this: List<T>,
+    PullAt(
+      this: ArrayLike<T>,
       ...indexes: Array<Many<number>>
     ): T[]
 
@@ -587,24 +657,24 @@ declare global {
      * @param thisArg The this binding of predicate.
      * @return Returns the new array of removed elements.
      */
-    remove(
-      this: List<T>,
+    Remove(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>
     ): T[]
 
     /**
-     * @see _.remove
+     * @see _.Remove
      */
-    remove(
-      this: List<T>,
+    Remove(
+      this: ArrayLike<T>,
       predicate?: string
     ): T[]
 
     /**
-     * @see _.remove
+     * @see _.Remove
      */
-    remove<W>(
-      this: List<T>,
+    Remove<W>(
+      this: ArrayLike<T>,
       predicate?: W
     ): T[]
 
@@ -616,7 +686,7 @@ declare global {
      * @param this The array to query.
      * @return Returns the slice of array.
      */
-    tail(this: List<T>): T[]
+    Tail(this: ArrayLike<T>): T[]
 
     /**
      * Uses a binary search to determine the lowest index at which `value` should
@@ -627,14 +697,14 @@ declare global {
      * @returns {number} Returns the index at which `value` should be inserted into `array`.
      * @example
      *
-     * _.sortedIndex([30, 50], 40);
+     * _.sortedIndex([30, 50], 40)
      * // => 1
      *
-     * _.sortedIndex([4, 5], 4);
+     * _.sortedIndex([4, 5], 4)
      * // => 0
      */
-    sortedIndex(
-      this: List<T>,
+    SortedIndex(
+      this: ArrayLike<T>,
       value: T
     ): number
 
@@ -649,53 +719,53 @@ declare global {
      * @returns {number} Returns the index at which `value` should be inserted into `array`.
      * @example
      *
-     * var dict = { 'thirty': 30, 'forty': 40, 'fifty': 50 };
+     * var dict = { 'thirty': 30, 'forty': 40, 'fifty': 50 }
      *
-     * _.sortedIndexBy(['thirty', 'fifty'], 'forty', _.propertyOf(dict));
+     * _.SortedIndexBy(['thirty', 'fifty'], 'forty', _.propertyOf(dict))
      * // => 1
      *
      * // using the `_.property` iteratee shorthand
-     * _.sortedIndexBy([{ 'x': 4 }, { 'x': 5 }], { 'x': 4 }, 'x');
+     * _.SortedIndexBy([{ 'x': 4 }, { 'x': 5 }], { 'x': 4 }, 'x')
      * // => 0
      */
-    sortedIndexBy<U>(
-      this: List<T>,
+    SortedIndexBy<U>(
+      this: ArrayLike<T>,
       value: T,
       iteratee: (x: T) => U
     ): number
 
     /**
-     * @see _.sortedIndexBy
+     * @see _.SortedIndexBy
      */
-    sortedIndexBy(
-      this: List<T>,
+    SortedIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: (x: T) => any
     ): number
 
     /**
-     * @see _.sortedIndexBy
+     * @see _.SortedIndexBy
      */
-    sortedIndexBy(
-      this: List<T>,
+    SortedIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: string
     ): number
 
     /**
-     * @see _.sortedIndexBy
+     * @see _.SortedIndexBy
      */
-    sortedIndexBy<W>(
-      this: List<T>,
+    SortedIndexBy<W>(
+      this: ArrayLike<T>,
       value: T,
       iteratee: W
     ): number
 
     /**
-     * @see _.sortedIndexBy
+     * @see _.SortedIndexBy
      */
-    sortedIndexBy(
-      this: List<T>,
+    SortedIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: Object
     ): number
@@ -710,16 +780,16 @@ declare global {
      * @returns {number} Returns the index at which `value` should be inserted into `array`.
      * @example
      *
-     * _.sortedLastIndex([4, 5], 4);
+     * _.SortedLastIndex([4, 5], 4)
      * // => 1
      */
-    sortedLastIndex(
-      this: List<T>,
+    SortedLastIndex(
+      this: ArrayLike<T>,
       value: T
     ): number
 
     /**
-     * This method is like `_.sortedLastIndex` except that it accepts `iteratee`
+     * This method is like `_.SortedLastIndex` except that it accepts `iteratee`
      * which is invoked for `value` and each element of `array` to compute their
      * sort ranking. The iteratee is invoked with one argument: (value).
      *
@@ -730,47 +800,47 @@ declare global {
      * @example
      *
      * // using the `_.property` iteratee shorthand
-     * _.sortedLastIndexBy([{ 'x': 4 }, { 'x': 5 }], { 'x': 4 }, 'x');
+     * _.SortedLastIndexBy([{ 'x': 4 }, { 'x': 5 }], { 'x': 4 }, 'x')
      * // => 1
      */
-    sortedLastIndexBy<TSort>(
-      this: List<T>,
+    SortedLastIndexBy<TSort>(
+      this: ArrayLike<T>,
       value: T,
       iteratee: (x: T) => TSort
     ): number
 
     /**
-     * @see _.sortedLastIndexBy
+     * @see _.SortedLastIndexBy
      */
-    sortedLastIndexBy(
-      this: List<T>,
+    SortedLastIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: (x: T) => any
     ): number
 
     /**
-     * @see _.sortedLastIndexBy
+     * @see _.SortedLastIndexBy
      */
-    sortedLastIndexBy(
-      this: List<T>,
+    SortedLastIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: string
     ): number
 
     /**
-     * @see _.sortedLastIndexBy
+     * @see _.SortedLastIndexBy
      */
-    sortedLastIndexBy<W>(
-      this: List<T>,
+    SortedLastIndexBy<W>(
+      this: ArrayLike<T>,
       value: T,
       iteratee: W
     ): number
 
     /**
-     * @see _.sortedLastIndexBy
+     * @see _.SortedLastIndexBy
      */
-    sortedLastIndexBy(
-      this: List<T>,
+    SortedLastIndexBy(
+      this: ArrayLike<T>,
       value: T,
       iteratee: Object
     ): number
@@ -784,11 +854,11 @@ declare global {
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
-     * _.sortedLastIndexOf([1, 1, 2, 2], 2);
+     * _.SortedLastIndexOf([1, 1, 2, 2], 2)
      * // => 3
      */
-    sortedLastIndexOf(
-      this: List<T>,
+    SortedLastIndexOf(
+      this: ArrayLike<T>,
       value: T
     ): number
 
@@ -799,8 +869,8 @@ declare global {
      * @param n The number of elements to take.
      * @return Returns the slice of array.
      */
-    take(
-      this: List<T>,
+    Take(
+      this: ArrayLike<T>,
       n?: number
     ): T[]
 
@@ -811,8 +881,8 @@ declare global {
      * @param n The number of elements to take.
      * @return Returns the slice of array.
      */
-    takeRight(
-      this: List<T>,
+    TakeRight(
+      this: ArrayLike<T>,
       n?: number
     ): T[]
 
@@ -834,24 +904,24 @@ declare global {
      * @param thisArg The this binding of predicate.
      * @return Returns the slice of array.
      */
-    takeRightWhile(
-      this: List<T>,
+    TakeRightWhile(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>
     ): T[]
 
     /**
-     * @see _.takeRightWhile
+     * @see _.TakeRightWhile
      */
-    takeRightWhile(
-      this: List<T>,
+    TakeRightWhile(
+      this: ArrayLike<T>,
       predicate?: string
     ): T[]
 
     /**
-     * @see _.takeRightWhile
+     * @see _.TakeRightWhile
      */
-    takeRightWhile<TWhere>(
-      this: List<T>,
+    TakeRightWhile<TWhere>(
+      this: ArrayLike<T>,
       predicate?: TWhere
     ): T[]
 
@@ -873,24 +943,24 @@ declare global {
      * @param thisArg The this binding of predicate.
      * @return Returns the slice of array.
      */
-    takeWhile(
-      this: List<T>,
+    TakeWhile(
+      this: ArrayLike<T>,
       predicate?: ListIterator<T, boolean>
     ): T[]
 
     /**
-     * @see _.takeWhile
+     * @see _.TakeWhile
      */
-    takeWhile(
-      this: List<T>,
+    TakeWhile(
+      this: ArrayLike<T>,
       predicate?: string
     ): T[]
 
     /**
-     * @see _.takeWhile
+     * @see _.TakeWhile
      */
-    takeWhile<TWhere>(
-      this: List<T>,
+    TakeWhile<TWhere>(
+      this: ArrayLike<T>,
       predicate?: TWhere
     ): T[]
 
@@ -901,7 +971,7 @@ declare global {
      * @param thiss The arrays to inspect.
      * @return Returns the new array of combined values.
      */
-    union(this: List<T>, ...arrays: Array<List<T> | null | undefined>): T[]
+    Union(this: ArrayLike<T>, ...arrays: Array<ArrayLike<T> | null | undefined>): T[]
 
     /**
      * This method is like `_.union` except that it accepts `iteratee` which is
@@ -912,119 +982,119 @@ declare global {
      * @param iteratee The iteratee invoked per element.
      * @return Returns the new array of combined values.
      */
-    unionBy(
-      this: List<T>,
-      arrays: List<T>,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays: ArrayLike<T>,
       iteratee?: (value: T) => any
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy<W extends Object>(
-      this: List<T>,
-      arrays: List<T>,
+    UnionBy<W extends Object>(
+      this: ArrayLike<T>,
+      arrays: ArrayLike<T>,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
       iteratee?: (value: T) => any
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy<W extends Object>(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
+    UnionBy<W extends Object>(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
       iteratee?: (value: T) => any
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy<W extends Object>(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
+    UnionBy<W extends Object>(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
-      arrays4: List<T> | null | undefined,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
+      arrays4: ArrayLike<T> | null | undefined,
       iteratee?: (value: T) => any
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy<W extends Object>(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
-      arrays4: List<T> | null | undefined,
+    UnionBy<W extends Object>(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
+      arrays4: ArrayLike<T> | null | undefined,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
-      arrays4: List<T> | null | undefined,
-      arrays5: List<T> | null | undefined,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
+      arrays4: ArrayLike<T> | null | undefined,
+      arrays5: ArrayLike<T> | null | undefined,
       iteratee?: (value: T) => any
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy<W extends Object>(
-      this: List<T>,
-      arrays1: List<T> | null | undefined,
-      arrays2: List<T> | null | undefined,
-      arrays3: List<T> | null | undefined,
-      arrays4: List<T> | null | undefined,
-      arrays5: List<T> | null | undefined,
+    UnionBy<W extends Object>(
+      this: ArrayLike<T>,
+      arrays1: ArrayLike<T> | null | undefined,
+      arrays2: ArrayLike<T> | null | undefined,
+      arrays3: ArrayLike<T> | null | undefined,
+      arrays4: ArrayLike<T> | null | undefined,
+      arrays5: ArrayLike<T> | null | undefined,
       iteratee?: W
     ): T[]
 
     /**
-     * @see _.unionBy
+     * @see _.UnionBy
      */
-    unionBy(
-      this: List<T>,
-      arrays: List<T> | null | undefined,
+    UnionBy(
+      this: ArrayLike<T>,
+      arrays: ArrayLike<T> | null | undefined,
       ...iteratee: any[]
     ): T[]
 
@@ -1038,11 +1108,11 @@ declare global {
      * @returns {Array} Returns the new duplicate free array.
      * @example
      *
-     * _.uniq([2, 1, 2]);
+     * _.uniq([2, 1, 2])
      * // => [2, 1]
      */
-    uniq(
-      this: List<T>
+    Uniq(
+      this: ArrayLike<T>
     ): T[]
 
     /**
@@ -1055,47 +1125,47 @@ declare global {
      * @returns {Array} Returns the new duplicate free array.
      * @example
      *
-     * _.uniqBy([2.1, 1.2, 2.3], Math.floor);
+     * _.uniqBy([2.1, 1.2, 2.3], Math.floor)
      * // => [2.1, 1.2]
      *
      * // using the `_.property` iteratee shorthand
-     * _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+     * _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x')
      * // => [{ 'x': 1 }, { 'x': 2 }]
      */
-    uniqBy(
-      this: List<T>,
+    UniqBy(
+      this: ArrayLike<T>,
       iteratee: ListIterator<T, any>
     ): T[]
 
     /**
-     * @see _.uniqBy
+     * @see _.UniqBy
      */
-    uniqBy<TSort>(
-      this: List<T>,
+    UniqBy<TSort>(
+      this: ArrayLike<T>,
       iteratee: ListIterator<T, TSort>
     ): T[]
 
     /**
-     * @see _.uniqBy
+     * @see _.UniqBy
      */
-    uniqBy(
-      this: List<T>,
+    UniqBy(
+      this: ArrayLike<T>,
       iteratee: string
     ): T[]
 
     /**
-     * @see _.uniqBy
+     * @see _.UniqBy
      */
-    uniqBy(
-      this: List<T>,
+    UniqBy(
+      this: ArrayLike<T>,
       iteratee: Object
     ): T[]
 
     /**
-     * @see _.uniqBy
+     * @see _.UniqBy
      */
-    uniqBy<TWhere extends object>(
-      this: List<T>,
+    UniqBy<TWhere extends object>(
+      this: ArrayLike<T>,
       iteratee: TWhere
     ): T[]
 
@@ -1107,18 +1177,18 @@ declare global {
      * @returns {Array} Returns the new duplicate free array.
      * @example
      *
-     * _.sortedUniq([1, 1, 2]);
+     * _.SortedUniq([1, 1, 2])
      * // => [1, 2]
      */
-    sortedUniq(
-      this: List<T>
+    SortedUniq(
+      this: ArrayLike<T>
     ): T[]
 
     /**
-     * @see _.sortedUniq
+     * @see _.SortedUniq
      */
-    sortedUniq(
-      this: List<T>
+    SortedUniq(
+      this: ArrayLike<T>
     ): T[]
 
     /**
@@ -1130,43 +1200,43 @@ declare global {
      * @returns {Array} Returns the new duplicate free array.
      * @example
      *
-     * _.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor);
+     * _.SortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor)
      * // => [1.1, 2.2]
      */
-    sortedUniqBy(
-      this: List<T>,
+    SortedUniqBy(
+      this: ArrayLike<T>,
       iteratee: ListIterator<T, any>
     ): T[]
 
     /**
-     * @see _.sortedUniqBy
+     * @see _.SortedUniqBy
      */
-    sortedUniqBy<TSort>(
-      this: List<T>,
+    SortedUniqBy<TSort>(
+      this: ArrayLike<T>,
       iteratee: ListIterator<T, TSort>
     ): T[]
 
     /**
-     * @see _.sortedUniqBy
+     * @see _.SortedUniqBy
      */
-    sortedUniqBy(
-      this: List<T>,
+    SortedUniqBy(
+      this: ArrayLike<T>,
       iteratee: string
     ): T[]
 
     /**
-     * @see _.sortedUniqBy
+     * @see _.SortedUniqBy
      */
-    sortedUniqBy(
-      this: List<T>,
+    SortedUniqBy(
+      this: ArrayLike<T>,
       iteratee: Object
     ): T[]
 
     /**
-     * @see _.sortedUniqBy
+     * @see _.SortedUniqBy
      */
-    sortedUniqBy<TWhere extends object>(
-      this: List<T>,
+    SortedUniqBy<TWhere extends object>(
+      this: ArrayLike<T>,
       iteratee: TWhere
     ): T[]
 
@@ -1180,14 +1250,14 @@ declare global {
      * @returns {Array} Returns the new array of combined values.
      * @example
      *
-     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
+     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }]
      *
-     * _.unionWith(objects, others, _.isEqual);
+     * _.UnionWith(objects, others, _.isEqual)
      * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
      */
-    unionWith(
-      this: List<any>,
+    UnionWith(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -1201,13 +1271,13 @@ declare global {
      * @returns {Array} Returns the new duplicate free array.
      * @example
      *
-     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 },  { 'x': 1, 'y': 2 }];
+     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 },  { 'x': 1, 'y': 2 }]
      *
-     * _.uniqWith(objects, _.isEqual);
+     * _.UniqWith(objects, _.isEqual)
      * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
      */
-    uniqWith(
-      this: List<any>,
+    UniqWith(
+      this: ArrayLike<any>,
       ...values: any[]
     ): any[]
 
@@ -1218,10 +1288,10 @@ declare global {
      * @param this The array of grouped elements to process.
      * @return Returns the new array of regrouped elements.
      */
-    unzip(this: List<T>, array: List<List<T>> | null | undefined): T[][]
+    Unzip(this: ArrayLike<T>, array: ArrayLike<ArrayLike<T>> | null | undefined): T[][]
 
     /**
-     * This method is like _.unzip except that it accepts an iteratee to specify how regrouped values should be
+     * This method is like _.Unzip except that it accepts an iteratee to specify how regrouped values should be
      * combined. The iteratee is bound to thisArg and invoked with four arguments: (accumulator, value, index,
      * group).
      *
@@ -1230,9 +1300,9 @@ declare global {
      * @param thisArg The this binding of iteratee.
      * @return Returns the new array of regrouped elements.
      */
-    unzipWith<U>(
-      this: List<T>,
-      array: List<List<T>> | null | undefined,
+    UnzipWith<U>(
+      this: ArrayLike<T>,
+      array: ArrayLike<ArrayLike<T>> | null | undefined,
       iteratee?: MemoIterator<T, U>
     ): U[]
 
@@ -1243,8 +1313,8 @@ declare global {
      * @param values The values to exclude.
      * @return Returns the new array of filtered values.
      */
-    without(
-      this: List<T>,
+    Without(
+      this: ArrayLike<T>,
       ...values: T[]
     ): T[]
 
@@ -1254,7 +1324,7 @@ declare global {
      * @param thiss The arrays to inspect.
      * @return Returns the new array of values.
      */
-    xor(this: List<T>, ...arrays: Array<List<T> | null | undefined>): T[]
+    Xor(this: ArrayLike<T>, ...arrays: Array<ArrayLike<T> | null | undefined>): T[]
 
     /**
      * This method is like `_.xor` except that it accepts `iteratee` which is
@@ -1266,20 +1336,20 @@ declare global {
      * @returns {Array} Returns the new array of values.
      * @example
      *
-     * _.xorBy([2.1, 1.2], [4.3, 2.4], Math.floor);
+     * _.xorBy([2.1, 1.2], [4.3, 2.4], Math.floor)
      * // => [1.2, 4.3]
      *
      * // using the `_.property` iteratee shorthand
-     * _.xorBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x');
+     * _.xorBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x')
      * // => [{ 'x': 2 }]
      */
-    xorBy(
-      this: List<T>,
+    XorBy(
+      this: ArrayLike<T>,
       ...values: any[]
     ): any[]
 
     /**
-     * This method is like `_.xor` except that it accepts `comparator` which is
+     * This method is like `_.Xor` except that it accepts `comparator` which is
      * invoked to compare elements of `arrays`. The comparator is invoked with
      * two arguments: (arrVal, othVal).
      *
@@ -1288,14 +1358,14 @@ declare global {
      * @returns {Array} Returns the new array of values.
      * @example
      *
-     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+     * var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
+     * var others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }]
      *
-     * _.xorWith(objects, others, _.isEqual);
+     * _.xorWith(objects, others, _.isEqual)
      * // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
      */
-    xorWith(
-      this: List<T>,
+    XorWith(
+      this: ArrayLike<T>,
       ...values: any[]
     ): any[]
 
@@ -1306,37 +1376,37 @@ declare global {
      * @param thiss The arrays to process.
      * @return Returns the new array of grouped elements.
      */
-    zip(this: List<T>, ...arrays: Array<List<T> | null | undefined>): T[][]
+    Zip(this: ArrayLike<T>, ...arrays: Array<ArrayLike<T> | null | undefined>): T[][]
 
     /**
-     * This method is like _.fromPairs except that it accepts two arrays, one of property
+     * This method is like _.FromPairs except that it accepts two arrays, one of property
      * identifiers and one of corresponding values.
      *
      * @param props The property names.
      * @param values The property values.
      * @return Returns the new object.
      */
-    zipObject<TValues = T>(
-      this: List<T>,
-      props: List<StringRepresentable> | List<List<any>>,
-      values?: List<TValues>
+    ZipObject<TValues = T>(
+      this: ArrayLike<T>,
+      props: ArrayLike<StringRepresentable> | ArrayLike<ArrayLike<any>>,
+      values?: ArrayLike<TValues>
     ): _.Dictionary<TValues>
 
     /**
-     * This method is like _.zipObject except that it supports property paths.
+     * This method is like _.ZipObject except that it supports property paths.
      *
      * @param props The property names.
      * @param values The property values.
      * @return Returns the new object.
      */
-    zipObjectDeep<TValues = T>(
-      this: List<T>,
-      props: List<StringRepresentable> | List<List<any>>,
-      values?: List<TValues>
+    ZipObjectDeep<TValues = T>(
+      this: ArrayLike<T>,
+      props: ArrayLike<StringRepresentable> | ArrayLike<ArrayLike<any>>,
+      values?: ArrayLike<TValues>
     ): _.Dictionary<TValues>
 
     /**
-     * This method is like _.zip except that it accepts an iteratee to specify how grouped values should be
+     * This method is like _.Zip except that it accepts an iteratee to specify how grouped values should be
      * combined. The iteratee is bound to thisArg and invoked with four arguments: (accumulator, value, index,
      * group).
      * @param {...Array} [arrays] The arrays to process.
@@ -1344,7 +1414,7 @@ declare global {
      * @param {*} [thisArg] The `this` binding of `iteratee`.
      * @return Returns the new array of grouped elements.
      */
-    zipWith<TResult>(this: List<T>, ...args: any[]): TResult[]
+    ZipWith<TResult>(this: ArrayLike<T>, ...args: any[]): TResult[]
   }
 }
 
@@ -1359,8 +1429,8 @@ declare global {
      * @param props The property names or indexes of elements to pick, specified individually or in arrays.
      * @return Returns the new array of picked elements.
      */
-    at(
-      this: List<T>,
+    At(
+      this: ArrayLike<T>,
       ...props: Array<Many<number | string>>
     ): T[]
 
@@ -1384,34 +1454,34 @@ declare global {
      * @param thisArg The this binding of iteratee.
      * @return Returns the composed aggregate object.
      */
-    countBy(
-      this: List<T>,
+    CountBy(
+      this: ArrayLike<T>,
       iteratee?: ListIterator<T, any>
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
-     * @see _.countBy
+     * @see _.CountBy
      */
-    countBy(
-      this: List<T>,
+    CountBy(
+      this: ArrayLike<T>,
       iteratee?: string
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
-     * @see _.countBy
+     * @see _.CountBy
      */
-    countBy<W>(
-      this: List<T>,
+    CountBy<W>(
+      this: ArrayLike<T>,
       iteratee?: W
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
-     * @see _.countBy
+     * @see _.CountBy
      */
-    countBy(
-      collection: List<T>,
+    CountBy(
+      collection: ArrayLike<T>,
       iteratee?: object
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * Creates an array of flattened values by running each element in collection through iteratee
@@ -1422,10 +1492,369 @@ declare global {
      * @param iteratee The function invoked per iteration.
      * @return Returns the new flattened array.
      */
-    flatMap(
-      this: List<Many<T>>,
+    FlatMap(
+      this: ArrayLike<Many<T>>,
       iteratee?: ListIterator<T, Many<T>>
-    ): T[];
+    ): T[]
+
+    /**
+     * This method is like _.forEach except that it iterates over elements of collection from right to left.
+     *
+     * @param collection The collection to iterate over.
+     * @param iteratee The function called per iteration.
+     * @param thisArg The this binding of callback.
+     */
+    ForEachRight(
+      this: T[],
+      iteratee?: ListIterator<T, any>
+    ): T[]
+
+    /**
+     * @see _.ForEachRight
+     */
+    ForEachRight(
+      this: ArrayLike<T>,
+      iteratee?: ListIterator<T, any>
+    ): ArrayLike<T>
+
+    /**
+     * Creates an object composed of keys generated from the results of running each element of collection through
+     * iteratee. The corresponding value of each key is an array of the elements responsible for generating the
+     * key. The iteratee is bound to thisArg and invoked with three arguments:
+     * (value, index|key, collection).
+     *
+     * If a property name is provided for iteratee the created _.property style callback returns the property
+     * value of the given element.
+     *
+     * If a value is also provided for thisArg the created _.matchesProperty style callback returns true for
+     * elements that have a matching property value, else false.
+     *
+     * If an object is provided for iteratee the created _.matches style callback returns true for elements that
+     * have the properties of the given object, else false.
+     *
+     * @param this The collection to iterate over.
+     * @param iteratee The function invoked per iteration.
+     * @param thisArg The this binding of iteratee.
+     * @return Returns the composed aggregate object.
+     */
+    GroupBy<TKey>(
+      this: ArrayLike<T>,
+      iteratee?: ListIterator<T, TKey>
+    ): Dictionary<T[]>
+
+    /**
+     * @see _.GroupBy
+     */
+    GroupBy<TValue>(
+      this: ArrayLike<T>,
+      iteratee?: string
+    ): Dictionary<T[]>
+
+    /**
+     * @see _.GroupBy
+     */
+    GroupBy<TWhere>(
+      this: ArrayLike<T>,
+      iteratee?: TWhere
+    ): Dictionary<T[]>
+
+    /**
+     * Creates an object composed of keys generated from the results of running each element of collection through
+     * iteratee. The corresponding value of each key is the last element responsible for generating the key. The
+     * iteratee function is bound to thisArg and invoked with three arguments:
+     * (value, index|key, collection).
+     *
+     * If a property name is provided for iteratee the created _.property style callback returns the property
+     * value of the given element.
+     *
+     * If a value is also provided for thisArg the created _.matchesProperty style callback returns true for
+     * elements that have a matching property value, else false.
+     *
+     * If an object is provided for iteratee the created _.matches style callback returns true for elements that
+     * have the properties of the given object, else false.
+     *
+     * @param collection The collection to iterate over.
+     * @param iteratee The function invoked per iteration.
+     * @param thisArg The this binding of iteratee.
+     * @return Returns the composed aggregate object.
+     */
+    KeyBy(
+      this: ArrayLike<T>,
+      iteratee?: ListIterator<T, any>
+    ): Dictionary<T>
+
+    /**
+     * @see _.KeyBy
+     */
+    KeyBy(
+      this: ArrayLike<T>,
+      iteratee?: string
+    ): Dictionary<T>
+
+    /**
+     * @see _.KeyBy
+     */
+    KeyBy<W extends object>(
+      this: ArrayLike<T>,
+      iteratee?: W
+    ): Dictionary<T>
+
+    /**
+    * Invokes the method named by methodName on each element in the collection returning
+    * an array of the results of each invoked method. Additional arguments will be provided
+    * to each invoked method. If methodName is a function it will be invoked for, and this
+    * bound to, each element in the collection.
+    * @param this The collection to iterate over.
+    * @param methodName The name of the method to invoke.
+    * @param args Arguments to invoke the method with.
+    **/
+    InvokeMap<TResult>(
+      this: T[],
+      methodName: string,
+      ...args: any[]
+    ): TResult[]
+
+    /**
+    * @see _.InvokeMap
+    **/
+    InvokeMap<TResult>(
+      this: T[],
+      method: (...args: any[]) => TResult,
+      ...args: any[]
+    ): TResult[]
+
+    /**
+      * Creates an array of elements split into two groups, the first of which contains elements predicate returns truthy for,
+      * while the second of which contains elements predicate returns falsey for.
+      * The predicate is bound to thisArg and invoked with three arguments: (value, index|key, collection).
+      *
+      * If a property name is provided for predicate the created _.property style callback
+      * returns the property value of the given element.
+      *
+      * If a value is also provided for thisArg the created _.matchesProperty style callback
+      * returns true for elements that have a matching property value, else false.
+      *
+      * If an object is provided for predicate the created _.matches style callback returns
+      * true for elements that have the properties of the given object, else false.
+      *
+      * @param this The collection to iterate over.
+      * @param callback The function called per iteration.
+      * @param thisArg The this binding of predicate.
+      * @return Returns the array of grouped elements.
+      **/
+    Partition(
+      this: ArrayLike<T>,
+      callback: ListIterator<T, boolean>
+    ): T[][]
+
+    /**
+     * @see _.Partition
+     **/
+    Partition<W>(
+      this: ArrayLike<T>,
+      whereValue: W
+    ): T[][]
+
+    /**
+     * @see _.Partition
+     **/
+    Partition(
+      this: ArrayLike<T>,
+      path: string,
+      srcValue: any
+    ): T[][]
+
+    /**
+     * @see _.Partition
+     **/
+    Partition(
+      this: ArrayLike<T>,
+      pluckValue: string
+    ): T[][]
+
+    /**
+     * The opposite of _.filter this method returns the elements of collection that predicate does not return
+     * truthy for.
+     *
+     * @param this The collection to iterate over.
+     * @param predicate The function invoked per iteration.
+     * @param thisArg The this binding of predicate.
+     * @return Returns the new filtered array.
+     */
+    Reject(
+      this: ArrayLike<T>,
+      predicate?: ListIterator<T, boolean>
+    ): T[]
+
+    /**
+     * @see _.Reject
+     */
+    Reject(
+      this: ArrayLike<T>,
+      predicate: string
+    ): T[]
+
+    /**
+     * @see _.Reject
+     */
+    Reject<W extends object>(
+      this: ArrayLike<T>,
+      predicate: W
+    ): T[]
+
+    /**
+     * Gets a random element from collection.
+     *
+     * @param this The collection to sample.
+     * @return Returns the random element.
+     */
+    Sample(this: ArrayLike<T>): T | undefined
+
+    /**
+     * Gets n random elements at unique keys from collection up to the size of collection.
+     *
+     * @param this The collection to sample.
+     * @param n The number of elements to sample.
+     * @return Returns the random elements.
+     */
+    SampleSize(
+      this: ArrayLike<T>,
+      n?: number
+    ): T[]
+
+    /**
+     * Creates an array of shuffled values, using a version of the Fisher-Yates shuffle.
+     *
+     * @param this The collection to shuffle.
+     * @return Returns the new shuffled array.
+     */
+    Shuffle(this: ArrayLike<T>): T[]
+
+    /**
+     * Gets the size of collection by returning its length for array-like values or the number of own enumerable
+     * properties for objects.
+     *
+     * @param this The collection to inspect.
+     * @return Returns the size of collection.
+     */
+    Size(this: ArrayLike<T>): number
+
+    /**
+     * Creates an array of elements, sorted in ascending order by the results of
+     * running each element in a collection through each iteratee. This method
+     * performs a stable sort, that is, it preserves the original sort order of
+     * equal elements. The iteratees are invoked with one argument: (value).
+     *
+     * @static
+     * @memberOf _
+     * @category Collection
+     * @param {Array} this The collection to iterate over.
+     * @param {...(Function|Function[]|Object|Object[]|string|string[])} [iteratees=[_.identity]]
+     *  The iteratees to sort by, specified individually or in arrays.
+     * @returns {Array} Returns the new sorted array.
+     * @example
+     *
+     * var users = [
+     *   { 'user': 'fred',   'age': 48 },
+     *   { 'user': 'barney', 'age': 36 },
+     *   { 'user': 'fred',   'age': 42 },
+     *   { 'user': 'barney', 'age': 34 }
+     * ]
+     *
+     * _.SortBy(users, function(o) { return o.user })
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 42]]
+     *
+     * _.SortBy(users, ['user', 'age'])
+     * // => objects for [['barney', 34], ['barney', 36], ['fred', 42], ['fred', 48]]
+     *
+     * _.SortBy(users, 'user', function(o) {
+     *   return Math.floor(o.age / 10)
+     * })
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 42]]
+     */
+    SortBy<TSort>(
+      this: ArrayLike<T>,
+      iteratee?: ListIterator<T, TSort>
+    ): T[]
+
+    /**
+     * @see _.SortBy
+     */
+    SortBy(
+      this: ArrayLike<T>,
+      iteratee: string
+    ): T[]
+
+    /**
+     * @see _.SortBy
+     */
+    SortBy<W extends object>(
+      this: ArrayLike<T>,
+      whereValue: W
+    ): T[]
+
+    /**
+     * @see _.SortBy
+     */
+    SortBy(this: ArrayLike<T>): T[]
+
+    /**
+     * @see _.SortBy
+     */
+    SortBy(
+      this: ArrayLike<T>,
+      iteratees: Array<ListIterator<T, any> | string | Object>
+    ): T[]
+
+    /**
+     * @see _.SortBy
+     */
+    SortBy(
+      this: ArrayLike<T>,
+      ...iteratees: Array<ListIterator<T, boolean> | Object | string>
+    ): T[]
+
+    /**
+     * This method is like `_.SortBy` except that it allows specifying the sort
+     * orders of the iteratees to sort by. If `orders` is unspecified, all values
+     * are sorted in ascending order. Otherwise, specify an order of "desc" for
+     * descending or "asc" for ascending sort order of corresponding values.
+     *
+     * @static
+     * @memberOf _
+     * @category Collection
+     * @param {Array} this The collection to iterate over.
+     * @param {Function[]|Object[]|string[]} [iteratees=[_.identity]] The iteratees to sort by.
+     * @param {string[]} [orders] The sort orders of `iteratees`.
+     * @param- {Object} [guard] Enables use as an iteratee for functions like `_.reduce`.
+     * @returns {Array} Returns the new sorted array.
+     * @example
+     *
+     * var users = [
+     *   { 'user': 'fred',   'age': 48 },
+     *   { 'user': 'barney', 'age': 34 },
+     *   { 'user': 'fred',   'age': 42 },
+     *   { 'user': 'barney', 'age': 36 }
+     * ]
+     *
+     * // sort by `user` in ascending order and by `age` in descending order
+     * _.OrderBy(users, ['user', 'age'], ['asc', 'desc'])
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 42]]
+     */
+    OrderBy<W extends object>(
+      this: ArrayLike<T>,
+      iteratees: Many<ListIterator<T, any> | string | W>,
+      orders?: Many<boolean | string>
+    ): T[]
+
+    /**
+     * @see _.OrderBy
+     */
+    OrderBy(
+      this: ArrayLike<T>,
+      iteratees: Many<ListIterator<T, any> | string | Object>,
+      orders?: Many<boolean | string>
+    ): T[]
 
   }
 }
