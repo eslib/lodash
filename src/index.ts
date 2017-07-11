@@ -1,6 +1,10 @@
 import { assign } from 'eslib'
 import * as _ from 'lodash'
 
+// re-export global extensions
+export * from './Array'
+export * from './Object'
+
 const SOURCE = 'lodash'
 const VERSION = '4.17.4'
 

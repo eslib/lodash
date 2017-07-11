@@ -1,4 +1,4 @@
-import { List, ListIterator, ListOfRecursiveArraysOrValues, Many, RecursiveArray, Dictionary, MemoIterator, StringRepresentable, DictionaryIterator, NumericDictionary, NumericDictionaryIterator, ObjectIterator } from 'lodash'
+import { Many, Dictionary, DictionaryIterator, NumericDictionary, NumericDictionaryIterator, ObjectIterator } from 'lodash'
 
 // collection methods
 declare global {
@@ -39,7 +39,7 @@ declare global {
     countBy<T>(
       this: Dictionary<T>,
       iteratee?: DictionaryIterator<T, any>
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -47,7 +47,7 @@ declare global {
     countBy<T>(
       this: NumericDictionary<T>,
       iteratee?: NumericDictionaryIterator<T, any>
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -55,7 +55,7 @@ declare global {
     countBy<T>(
       this: Dictionary<T> | NumericDictionary<T>,
       iteratee?: string
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -63,7 +63,7 @@ declare global {
     countBy<W, T>(
       this: Dictionary<T> | NumericDictionary<T>,
       iteratee?: W
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -71,7 +71,7 @@ declare global {
     countBy<T>(
       this: Dictionary<T> | NumericDictionary<T>,
       iteratee?: Object
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * Creates an array of flattened values by running each element in collection through iteratee
@@ -85,7 +85,7 @@ declare global {
     flatMap<T, TResult>(
       this: Dictionary<T>,
       iteratee?: DictionaryIterator<T, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -93,7 +93,7 @@ declare global {
     flatMap<TResult>(
       this: Dictionary<any>,
       iteratee?: DictionaryIterator<any, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -101,7 +101,7 @@ declare global {
     flatMap<T, TResult>(
       this: NumericDictionary<T>,
       iteratee?: NumericDictionaryIterator<T, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -109,7 +109,7 @@ declare global {
     flatMap<TResult>(
       this: NumericDictionary<any>,
       iteratee?: NumericDictionaryIterator<any, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -117,7 +117,7 @@ declare global {
     flatMap<TObject extends Object, TResult>(
       this: TObject,
       iteratee?: ObjectIterator<any, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -125,7 +125,7 @@ declare global {
     flatMap<TResult>(
       this: Object,
       iteratee?: ObjectIterator<any, Many<TResult>>
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -133,7 +133,7 @@ declare global {
     flatMap<TWhere extends Object, TObject extends Object>(
       this: TObject,
       iteratee: TWhere
-    ): boolean[];
+    ): boolean[]
 
     /**
      * @see _.flatMap
@@ -141,7 +141,7 @@ declare global {
     flatMap<TObject extends Object, TResult>(
       this: TObject,
       iteratee: Object | string
-    ): TResult[];
+    ): TResult[]
 
     /**
      * @see _.flatMap
@@ -149,7 +149,7 @@ declare global {
     flatMap<TObject extends Object>(
       this: TObject,
       iteratee: [string, any]
-    ): boolean[];
+    ): boolean[]
 
     /**
      * @see _.flatMap
@@ -157,6 +157,6 @@ declare global {
     flatMap<TResult>(
       this: object,
       iteratee?: object | string
-    ): TResult[];
+    ): TResult[]
   }
 }
