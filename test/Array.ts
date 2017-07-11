@@ -30,3 +30,12 @@ test('pull', t => t.deepEqual([1, 2, 3].pull(2, 3), [1]))
 
 // collection methods
 test('flatMap', t => t.deepEqual([1, 2, [3, 4]].flatMap(_ => Array.isArray(_) ? -1 : _ * 2), [2, 4, -1]))
+
+test('mixed (1)', t => t.deepEqual(
+  [1, 2, 3, 4]
+    .dropWhile(_ => _ < 2)
+    .initial()
+    .chunk(2)
+    .fromPairs(),
+  { 2: 3 }
+))
