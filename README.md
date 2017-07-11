@@ -1,4 +1,4 @@
-<img src="logo.png" alt="ESlib + Lodash" />
+<img src="logo.png" alt="ESlib + Lodash" width="450px" />
 
 [![Build Status][build]](https://circleci.com/gh/eslib/lodash) [![npm]](https://www.npmjs.com/package/@eslib/lodash) [![mit]](https://opensource.org/licenses/MIT)
 
