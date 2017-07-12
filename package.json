@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run clean && tsc -d",
+    "build": "npm run clean && tsc -d && ./scripts/template.js",
     "clean": "rm -rf dist",
     "lint": "tslint .",
     "prepublish": "npm run lint && npm test",

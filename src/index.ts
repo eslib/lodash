@@ -5,8 +5,8 @@ import * as _ from 'lodash'
 export * from './Array'
 export * from './Object'
 
-const SOURCE = 'lodash'
-const VERSION = '4.17.4'
+const SOURCE = '<%= name %>'
+const VERSION = '<%= version %>'
 
 const collectionExtensions = ['countBy', 'every', 'filter', 'find', 'findLast', 'flatMap', 'flatMapDeep', 'forEach', 'forEachRight', 'groupBy', 'includes', 'invokeMap', 'keyBy', 'map', 'orderBy', 'partition', 'reduce', 'reduceRight', 'reject', 'sample', 'sampleSize', 'shuffle', 'size', 'some', 'sortBy']
 
