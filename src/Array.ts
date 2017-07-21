@@ -386,7 +386,22 @@ declare global {
      * @param this The array to query.
      * @return Returns the first element of array.
      */
-    head(this: ArrayLike<T>): T | undefined
+    head(this: T[]): T | undefined
+
+    /**
+     * Checks if target is in collection using SameValueZero for equality comparisons. If fromIndex is negative,
+     * it’s used as the offset from the end of collection.
+     *
+     * @param this The collection to search.
+     * @param target The value to search for.
+     * @param fromIndex The index to search from.
+     * @return True if the target element is found, else false.
+     */
+    includes(
+      this: T[],
+      target: T,
+      fromIndex?: number
+    ): boolean
 
     /**
      * This method is like `_.intersection` except that it accepts `iteratee`
@@ -1387,7 +1402,7 @@ declare global {
     countBy(
       this: ArrayLike<T>,
       iteratee?: ListIterator<T, any>
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -1395,7 +1410,7 @@ declare global {
     countBy(
       this: ArrayLike<T>,
       iteratee?: string
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -1403,7 +1418,7 @@ declare global {
     countBy<W>(
       this: ArrayLike<T>,
       iteratee?: W
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * @see _.countBy
@@ -1411,7 +1426,7 @@ declare global {
     countBy(
       collection: ArrayLike<T>,
       iteratee?: object
-    ): Dictionary<number>;
+    ): Dictionary<number>
 
     /**
      * Creates an array of flattened values by running each element in collection through iteratee
@@ -1425,7 +1440,7 @@ declare global {
     flatMap(
       this: ArrayLike<Many<T>>,
       iteratee?: ListIterator<T, Many<T>>
-    ): T[];
+    ): T[]
 
   }
 }

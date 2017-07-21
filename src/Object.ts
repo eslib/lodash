@@ -158,5 +158,20 @@ declare global {
       this: object,
       iteratee?: object | string
     ): TResult[]
+
+    /**
+     * Checks if target is in collection using SameValueZero for equality comparisons. If fromIndex is negative,
+     * it’s used as the offset from the end of collection.
+     *
+     * @param this The collection to search.
+     * @param target The value to search for.
+     * @param fromIndex The index to search from.
+     * @return True if the target element is found, else false.
+     */
+    includes<T>(
+      this: Dictionary<T>,
+      target: T,
+      fromIndex?: number
+    ): boolean
   }
 }
