@@ -4,6 +4,84 @@ import { Many, Dictionary, DictionaryIterator, NumericDictionary, NumericDiction
 declare global {
   interface Object {
     /**
+     * Assigns own enumerable properties of source objects to the destination
+     * object. Source objects are applied from left to right. Subsequent sources
+     * overwrite property assignments of previous sources.
+     *
+     * **Note:** This method mutates `object` and is loosely based on
+     * [`Object.assign`](https://mdn.io/Object/assign).
+     *
+     * @static
+     * @memberOf _
+     * @category Object
+     * @param {Object} this The destination object.
+     * @param {...Object} [sources] The source objects.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * function Foo() {
+     *   this.c = 3;
+     * }
+     *
+     * function Bar() {
+     *   this.e = 5;
+     * }
+     *
+     * Foo.prototype.d = 4;
+     * Bar.prototype.f = 6;
+     *
+     * _.assign({ 'a': 1 }, new Foo, new Bar);
+     * // => { 'a': 1, 'c': 3, 'e': 5 }
+     */
+    assign<TObject, TSource>(
+      this: TObject,
+      source: TSource
+    ): TObject & TSource
+
+    /**
+     * @see assign
+     */
+    assign<TObject, TSource1, TSource2>(
+      this: TObject,
+      source1: TSource1,
+      source2: TSource2
+    ): TObject & TSource1 & TSource2
+
+    /**
+     * @see assign
+     */
+    assign<TObject, TSource1, TSource2, TSource3>(
+      this: TObject,
+      source1: TSource1,
+      source2: TSource2,
+      source3: TSource3
+    ): TObject & TSource1 & TSource2 & TSource3
+
+    /**
+     * @see assign
+     */
+    assign<TObject, TSource1, TSource2, TSource3, TSource4>(
+      this: TObject,
+      source1: TSource1,
+      source2: TSource2,
+      source3: TSource3,
+      source4: TSource4
+    ): TObject & TSource1 & TSource2 & TSource3 & TSource4
+
+    /**
+     * @see _.assign
+     */
+    assign<TObject>(this: TObject): TObject
+
+    /**
+     * @see _.assign
+     */
+    assign<TResult>(
+      this: any,
+      ...otherArgs: any[]
+    ): TResult
+
+    /**
      * Creates an array of elements corresponding to the given keys, or indexes, of collection. Keys may be
      * specified as individual arguments or as arrays of keys.
      *
