@@ -1,6 +1,6 @@
 {
   "name": "@eslib/lodash",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "(Lodash + ESlib = <3) All the Lodash functions available natively",
   "eslib": true,
   "main": "dist/src/index.js",
@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/eslib/lodash#readme",
   "devDependencies": {
-    "@types/node": "^8.0.10",
-    "ava": "^0.20.0",
+    "@types/node": "^8.0.19",
+    "ava": "^0.21.0",
     "concurrently": "^3.5.0",
     "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "typescript": "^2.4.2"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.68",
-    "eslib": "^0.1.1",
+    "@types/lodash": "^4.14.71",
+    "eslib": "^0.2.2",
     "lodash": "^4.17.4"
   },
   "ava": {
