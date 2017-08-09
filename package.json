@@ -1,6 +1,6 @@
 {
   "name": "@eslib/lodash",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "(Lodash + ESlib = <3) All the Lodash functions available natively",
   "eslib": true,
   "main": "dist/src/index.js",

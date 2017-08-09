@@ -3,7 +3,6 @@ import * as _ from 'lodash'
 
 // re-export global extensions
 export * from './Array'
-export * from './Object'
 
 const SOURCE = '<%= name %>'
 const VERSION = '<%= version %>'
@@ -22,8 +21,6 @@ extensions.set(Function.prototype, ['after', 'ary', 'before', 'bind', 'bindKey',
 extensions.set(Math, ['add', 'ceil', 'divide', 'floor', 'max', 'maxBy', 'mean', 'meanBy', 'min', 'minBy', 'multiply', 'round', 'subtract', 'sum', 'sumBy'])
 
 extensions.set(Number, ['clamp', 'inRange', 'random'])
-
-extensions.set(Object.prototype, ['assign', 'assignIn', 'assignInWith', 'assignWith', 'at', 'create', 'defaults', 'defaultsDeep', 'findKey', 'findLastKey', 'forIn', 'forInRight', 'forOwn', 'forOwnRight', 'functions', 'functionsIn', 'get', 'has', 'hasIn', 'includes', 'invert', 'invertBy', 'invoke', 'keys', 'keysIn', 'mapKeys', 'mapValues', 'merge', 'mergeWith', 'omit', 'omitBy', 'pick', 'pickBy', 'result', 'set', 'setWith', 'toPairs', 'toPairsIn', 'transform', 'unset', 'update', 'updateWith', 'values', 'valuesIn', ...collectionExtensions])
 
 extensions.set(String.prototype, ['camelCase', 'capitalize', 'deburr', 'endsWith', 'escape', 'escapeRegExp', 'kebabCase', 'lowerCase', 'lowerFirst', 'pad', 'padEnd', 'padStart', 'parseInt', 'repeat', 'replace', 'snakeCase', 'split', 'startCase', 'startsWith', 'template', 'toLower', 'toUpper', 'trim', 'trimEnd', 'trimStart', 'truncate', 'unescape', 'upperCase', 'upperFirst', 'words'])
 
